@@ -2,11 +2,25 @@ import java.util.Iterator;
 import java.util.List;
 
 public class FlattenedIterator implements Iterator<Integer> {
+  /**
+   * This file is the solution for Week 2 - Flattened Iterator
+   *
+   * Prompt: Given a list of iterators, implement a FlattenedIterator class which incrementally
+   * iterates over the integers from all the iterators in an interleaved fashion.
+   */
+  
+  /**
+   * Initial declarations
+   */
   List<Iterator<Integer>> subiterators;
   int index = 0;
   int size;
   int counter = 0;
   
+  /**
+   * Class constructor
+   * @param subiterators : a list of integer iterators
+   */
   public FlattenedIterator(List<Iterator<Integer>> subiterators) {
     this.subiterators = subiterators;
     this.size = subiterators.size();
