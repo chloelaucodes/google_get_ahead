@@ -1,5 +1,5 @@
 # Google Get Ahead
- This repository holds my solution to the Google Get Ahead EMEA 2020 Coding Challenges in Java
+ This repository holds my solutions to the Google Get Ahead EMEA 2020 Coding Challenges.
 
 ## Introduction
  This Code Challenge is as part of the Google Get Ahead EMEA 2020, an invite-only summer virtual
@@ -11,7 +11,7 @@
   This repository holds a source directory, which holds the coding challenge solutions. The
    6 coding challenge starts from Week 2 and involves a prompt and options to solve the question
     in either Java, Python or C++. The files for each week will be stored in their respective
-     `Week <num>` folders.
+     `Week <num>` folders. My solutions are all written in my preference language: Java.
      
 ## Style
   This repository follows Google Style Guide in Java. 
