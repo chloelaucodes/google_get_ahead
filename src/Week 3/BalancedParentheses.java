@@ -48,7 +48,7 @@ public class BalancedParentheses {
         rightCounter++;
       }
     } else {
-      // Falls back and resets if the current value isn't either '(' or ')'
+      // Falls back and resets counters if the current value isn't either '(' or ')'
       resetCounter();
     }
     // Increments index and recurses
