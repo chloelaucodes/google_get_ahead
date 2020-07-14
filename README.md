@@ -2,8 +2,8 @@
  This repository holds my solution to the Google Get Ahead EMEA 2020 Coding Challenges in Java
 
 ## Introduction
- This Code Challenge is as part of the Google Get Ahead EMEA 2020, an invite only summer virtual
-  program for female software engineers and developers. 500 females in the Europian, Middle East
+ This Code Challenge is as part of the Google Get Ahead EMEA 2020, an invite-only summer virtual
+  program for female software engineers and developers. 500 females in the European, Middle East
    and African zone are invited for this 8 week long program and to watch the video sessions,
     interview workshops and coding challenges.
   
@@ -14,7 +14,7 @@
      `Week <num>` folders.
      
 ## Style
-  This repository follows Google Style Guide. 
+  This repository follows Google Style Guide in Java. 
   
 ## Testing
   The solutions of the coding challenges are submitted in the Mimir platform, which integrates
