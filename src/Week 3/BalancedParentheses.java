@@ -6,7 +6,7 @@
 /**
  * This file is the solution for Week 3 - Balanced Parentheses
  *
- * <p>Prompt: Given a string of parentheses, find the size of the longest contiguous substring of
+ * Prompt: Given a string of parentheses, find the size of the longest contiguous substring of
  * balanced parentheses. Parentheses are considered balanced when there is a valid closing
  * parenthesis for an opening one.
  */
