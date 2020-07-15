@@ -9,7 +9,7 @@
  This Code Challenge is as part of the 
  [Google Get Ahead EMEA 2020](https://events.withgoogle.com/get-ahead-emea-2020/#content), an
   invite-only summer virtual program for female software engineers and developers. 500 females in
-   the European, Middle East and African zone are invited for this 8 week long program and for video
+   the European, Middle Eastern and African zone are invited for this 8 week long program and for video
     sessions, interview workshops and coding challenges.
   
 ## Repository
