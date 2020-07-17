@@ -18,16 +18,18 @@
     in either Java, Python or C++. The files for each week will be stored in their respective
      `Week <num>` folders. My solutions are all written in my preference language: Java.
      
+## Style
+   This repository follows
+    [Google Code Style Guide](https://google.github.io/styleguide/javaguide.html) in Java. 
+    
 ## Current Repository Index
   This repository currently has 2 tasks completed:
   * Week 2: [Flattened Iterator](src/Week 2/FlattenedIterator.java)
   * Week 3: [Balanced Parentheses](src/Week 3/BalancedParentheses.java)
-     
-## Style
-  This repository follows 
-  [Google Code Style Guide](https://google.github.io/styleguide/javaguide.html) in Java. 
   
 ## Testing
   The solutions of the coding challenges are submitted in the [Mimir](https://www.mimirhq.com/)
-   platform, which integrates testing from within, hence the lack of test suites in this
-    repository. There might be more test suite built further on for testing usages in the future. 
+   platform, which integrates testing from within. However, I have built JUnit tests within the
+    week's folder.
+  * Week 2: [Flattened Iterator Test](src/Week 2/FlattenedIteratorTest.java)
+  * Week 3: [Balanced Parentheses Test](src/Week 3/BalancedParenthesesTest.java)
