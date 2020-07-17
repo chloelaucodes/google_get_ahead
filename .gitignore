@@ -24,6 +24,10 @@ hs_err_pid*
 
 # IntelliJ idea files
 .idea/
+out/
+*.iml
+*.ipr
+*.iws
 
 # Change files
 .DS_Store
