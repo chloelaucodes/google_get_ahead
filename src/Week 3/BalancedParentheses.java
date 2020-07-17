@@ -10,7 +10,8 @@
  * parenthesis for an opening one.
  */
 public class BalancedParentheses {
-  
+
+  /** Initial declarations */
   // this stores the number of left parentheses
   private static Integer leftCounter = 0;
   // this stores the number of right parentheses
@@ -21,9 +22,9 @@ public class BalancedParentheses {
   private static Integer startPoint = 0;
   // this stores the string to be evaluated
   private static String string;
-  
+
   /**
-   * Finds the longest number of valid balanced parentheses
+   * finds the longest number of valid balanced parentheses
    *
    * @param str the string to be parsed and checked
    * @return length of the longest valid balanced parentheses
@@ -36,9 +37,10 @@ public class BalancedParentheses {
     // calls helper function findLongestBalanced()
     return findLongestBalanced();
   }
-  
+
   /**
    * helper function of longestBalanced(), recursive
+   *
    * @return length of the longest valid balanced parentheses
    */
   private static Integer findLongestBalanced() {
@@ -46,11 +48,12 @@ public class BalancedParentheses {
     resetCounter();
     // stores length as a variable
     int length = string.length();
+    if (length == 0) return 0;
     // loops through from startingPoint to end of string
     for (int i = startPoint; i < length; i++) {
       // checks what the current character is
       switch (string.charAt(i)) {
-        // if the current char is '('
+          // if the current char is '('
         case '(':
           leftCounter++;
           // if this is end of list
@@ -58,7 +61,7 @@ public class BalancedParentheses {
             return printAndResetMax();
           }
           break;
-        // if the current char is ')'
+          // if the current char is ')'
         case ')':
           rightCounter++;
           // if parentheses are balanced
@@ -82,7 +85,7 @@ public class BalancedParentheses {
             return printAndResetMax();
           }
           break;
-        // if input not '(' or ')', skip
+          // if input not '(' or ')', skip
         default:
           break;
       }
@@ -90,7 +93,7 @@ public class BalancedParentheses {
     // returns maxInterval
     return printAndResetMax();
   }
-  
+
   /**
    * [Overloaded] resets leftCounter and rightCounter, and sets startPoint to index
    *
@@ -100,7 +103,7 @@ public class BalancedParentheses {
     startPoint = index;
     resetCounter();
   }
-  
+
   /**
    * [Overloaded] resets leftCounter and rightCounter
    */
@@ -108,7 +111,7 @@ public class BalancedParentheses {
     leftCounter = 0;
     rightCounter = 0;
   }
-  
+
   /**
    * resets maxInterval and returns the value prior to reset
    *
