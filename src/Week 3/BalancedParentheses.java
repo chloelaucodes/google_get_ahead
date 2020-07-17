@@ -1,4 +1,3 @@
-// Comments given alongside the task
 // In an interview you can generally omit the import statements,
 // however if you decide to use some library (like Stack in this example)
 // it's a good idea to mention it to the Interviewer and ask if it's allowed.
@@ -12,14 +11,16 @@
  */
 public class BalancedParentheses {
   
-  // This stores the number of left parentheses
-  private static int leftCounter = 0;
-  // This stores the number of right parentheses
-  private static int rightCounter = 0;
-  // This stores the current index
-  private static int index = 0;
-  // This stores the max interval of valid parentheses
-  private static int maxInterval = 0;
+  // this stores the number of left parentheses
+  private static Integer leftCounter = 0;
+  // this stores the number of right parentheses
+  private static Integer rightCounter = 0;
+  // this stores the max interval of valid parentheses
+  private static Integer maxInterval = 0;
+  // this stores the starting point of the interval
+  private static Integer startPoint = 0;
+  // this stores the string to be evaluated
+  private static String string;
   
   /**
    * Finds the longest number of valid balanced parentheses
@@ -27,41 +28,95 @@ public class BalancedParentheses {
    * @param str the string to be parsed and checked
    * @return length of the longest valid balanced parentheses
    */
-  public static int longestBalanced(String str) {
-    if (index >= str.length() || maxInterval >= str.length() - index) {
-      // Checks if index is bigger than the length of str or whether the remainder length of str is
-      // shorter than the current maxInterval
-      return maxInterval;
-    } else if (str.charAt(index) == '(') {
-      // Checks if the current char of str at index is '('
-      leftCounter++;
-    } else if (str.charAt(index) == ')') {
-      // Checks if the current char of str at index is ')'
-      // Checks if there are more right parentheses than left parentheses
-      if (rightCounter >= leftCounter) {
-        // maxInterval takes the higher value of the current maxInterval with the lower of
-        // leftCounter and rightCounter
-        maxInterval = Math.max(Math.min(leftCounter, rightCounter), maxInterval);
-        // Resets counters
-        resetCounter();
-      } else {
-        rightCounter++;
-      }
-    } else {
-      // Falls back and resets counters if the current value isn't either '(' or ')'
-      resetCounter();
-    }
-    // Increments index and recurses
-    index++;
-    return longestBalanced(str);
+  public static Integer longestBalanced(String str) {
+    // assign string
+    string = str;
+    // resets counters and startPoint every time longestBalanced is called
+    resetCounter(0);
+    // calls helper function findLongestBalanced()
+    return findLongestBalanced();
   }
   
   /**
-   * resets both counters
+   * helper function of longestBalanced(), recursive
+   * @return length of the longest valid balanced parentheses
    */
-  public static void resetCounter() {
+  private static Integer findLongestBalanced() {
+    // resets counters every time longestBalanced is called
+    resetCounter();
+    // stores length as a variable
+    int length = string.length();
+    // loops through from startingPoint to end of string
+    for (int i = startPoint; i < length; i++) {
+      // checks what the current character is
+      switch (string.charAt(i)) {
+        // if the current char is '('
+        case '(':
+          leftCounter++;
+          // if this is end of list
+          if (i == length - 1) {
+            return printAndResetMax();
+          }
+          break;
+        // if the current char is ')'
+        case ')':
+          rightCounter++;
+          // if parentheses are balanced
+          if (leftCounter.equals(rightCounter)) {
+            // returns larger of maxInterval and current largest set of balanced parentheses
+            maxInterval = Math.max(maxInterval, leftCounter * 2);
+            // resets counters and set startPoint to index after this
+            resetCounter(i + 1);
+            // if there are more ')' than '(' (with the fall thru it should have 0 '(')
+          } else if (rightCounter > leftCounter) {
+            // resets counters and set startPoint to index after this
+            resetCounter(i + 1);
+            // if this is end of list
+          } else if (i == length - 1) {
+            // if startPoint is before end of list, then increments startPoint
+            if (startPoint++ < length - 1) {
+              // returns larger of current maxInterval and the maxInterval of from startPoint
+              return Math.max(printAndResetMax(), findLongestBalanced());
+            }
+            // returns maxInterval
+            return printAndResetMax();
+          }
+          break;
+        // if input not '(' or ')', skip
+        default:
+          break;
+      }
+    }
+    // returns maxInterval
+    return printAndResetMax();
+  }
+  
+  /**
+   * [Overloaded] resets leftCounter and rightCounter, and sets startPoint to index
+   *
+   * @param index startPoint to be set
+   */
+  private static void resetCounter(int index) {
+    startPoint = index;
+    resetCounter();
+  }
+  
+  /**
+   * [Overloaded] resets leftCounter and rightCounter
+   */
+  private static void resetCounter() {
     leftCounter = 0;
     rightCounter = 0;
   }
+  
+  /**
+   * resets maxInterval and returns the value prior to reset
+   *
+   * @return maxInterval before reset
+   */
+  private static Integer printAndResetMax() {
+    Integer max = maxInterval;
+    maxInterval = 0;
+    return max;
+  }
 }
-
