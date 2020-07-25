@@ -31,7 +31,7 @@
 ## Testing
   The solutions of the coding challenges are submitted in the [Mimir](https://www.mimirhq.com/)
    platform, which integrates testing from within. However, I have built
-   
    [JUnit5](https://junit.org/junit5/) tests within the week's folder.
-  * Week 2: [Flattened Iterator Test](src/Week 2/FlattenedIteratorTest.java)
-  * Week 3: [Balanced Parentheses Test](src/Week 3/BalancedParenthesesTest.java)
+  * Week 2: [Flattened Iterator Test](src/Week%202/FlattenedIteratorTest.java)
+  * Week 3: [Balanced Parentheses Test](src/Week%203/BalancedParenthesesTest.java)
+  * Week 4: [Tree Longest Path Test](src/Week%204/TreeLongestPathTest.java)
