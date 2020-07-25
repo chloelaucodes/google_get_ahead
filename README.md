@@ -26,6 +26,7 @@
   This repository currently has 2 tasks completed:
   * Week 2: [Flattened Iterator](src/Week 2/FlattenedIterator.java)
   * Week 3: [Balanced Parentheses](src/Week 3/BalancedParentheses.java)
+  * Week 4: [Tree](src/Week 4/Tree.java)
   
 ## Testing
   The solutions of the coding challenges are submitted in the [Mimir](https://www.mimirhq.com/)
