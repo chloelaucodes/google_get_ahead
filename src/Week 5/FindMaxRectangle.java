@@ -1,26 +1,28 @@
 import java.util.Stack;
 
 public class FindMaxRectangle {
-
-  private int[] histogram;
   
+  private int[] histogram; // global var for int array histogram
+
   /**
    * default FindMaxRectangle constructor
+   *
    * @param histogram int array of the histogram
    */
   public FindMaxRectangle(int[] histogram) {
     this.histogram = histogram;
   }
-  
+
   /**
    * finds the area of the maximum rectangle under the curve.
+   *
    * @return int array with the left and right indices that represent the rectangle
    */
   public int[] findMaxRectangle() {
     if (histogram == null || histogram.length == 0) { // empty histogram
       return new int[] {-1, -1}; // return {-1, -1}
     }
-    
+
     Stack<int[]> stack = new Stack<>(); // stack stores {index, height}, strictly increasing height
     int i = 0; // iterator
     int[] result = new int[3]; // results stores {start coord, end coord, area}
