@@ -27,6 +27,7 @@
   * Week 2: [Flattened Iterator](src/Week%202/FlattenedIterator.java)
   * Week 3: [Balanced Parentheses](src/Week%203/BalancedParentheses.java)
   * Week 4: [Longest Path in Tree](src/Week%204/Tree.java)
+  * Week 5: [Find Max Rectangle](src/Week%205/FindMaxRectangle.java)
   
 ## Testing
   The solutions of the coding challenges are submitted in the [Mimir](https://www.mimirhq.com/)
@@ -35,3 +36,5 @@
   * Week 2: [Flattened Iterator Test](src/Week%202/FlattenedIteratorTest.java)
   * Week 3: [Balanced Parentheses Test](src/Week%203/BalancedParenthesesTest.java)
   * Week 4: [Longest Path in Tree Test](src/Week%204/TreeLongestPathTest.java)
+  * Week 5: [Find Max Rectangle](src/Week%205/FindMaxRectangleTest.java)
+
