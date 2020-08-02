@@ -36,5 +36,5 @@
   * Week 2: [Flattened Iterator Test](src/Week%202/FlattenedIteratorTest.java)
   * Week 3: [Balanced Parentheses Test](src/Week%203/BalancedParenthesesTest.java)
   * Week 4: [Longest Path in Tree Test](src/Week%204/TreeLongestPathTest.java)
-  * Week 5: [Find Max Rectangle](src/Week%205/FindMaxRectangleTest.java)
+  * Week 5: [Find Max Rectangle Test](src/Week%205/FindMaxRectangleTest.java)
 
