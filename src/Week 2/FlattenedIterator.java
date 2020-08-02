@@ -65,7 +65,7 @@ public class FlattenedIterator implements Iterator<Integer> {
       // value in the correct Iterator and increments the index
       return this.subiterators.get(this.index++ % this.size).next();
     }
-    // According to the precondition this will never be reached unless being used illegally
-    return null;
+    return null; // According to the precondition this will never be reached unless being used illegally
+
   }
 }
