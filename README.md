@@ -21,13 +21,15 @@
 ## Style
    This repository follows
     [Google Code Style Guide](https://google.github.io/styleguide/javaguide.html) in Java. 
+    The project works on [JDK 13](https://www.oracle.com/java/technologies/javase-jdk13-downloads.html)
     
 ## Current Repository Index
-  This repository currently has 2 tasks completed:
+  This repository currently has 5 tasks completed:
   * Week 2: [Flattened Iterator](src/Week%202/FlattenedIterator.java)
   * Week 3: [Balanced Parentheses](src/Week%203/BalancedParentheses.java)
   * Week 4: [Longest Path in Tree](src/Week%204/Tree.java)
   * Week 5: [Find Max Rectangle](src/Week%205/FindMaxRectangle.java)
+  * Week 6: [Shortest Word in Car Plate](src/Week%206/ShortestWordInCarPlate.java)
   
 ## Testing
   The solutions of the coding challenges are submitted in the [Mimir](https://www.mimirhq.com/)
@@ -37,4 +39,5 @@
   * Week 3: [Balanced Parentheses Test](src/Week%203/BalancedParenthesesTest.java)
   * Week 4: [Longest Path in Tree Test](src/Week%204/TreeLongestPathTest.java)
   * Week 5: [Find Max Rectangle Test](src/Week%205/FindMaxRectangleTest.java)
+  * Week 6: [Pending]
 
